@@ -168,7 +168,8 @@ extension GoTrueClientSignInProvider on GoTrueClient {
       options: options,
     );
     final url = Uri.parse(res.url!);
-    final result = await launchUrl(url, webOnlyWindowName: '_self', webViewConfiguration: const WebViewConfiguration(headers: <String, String>{'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Mobile/15E148 Safari/604.1'}));
+    final result = await launchUrl(url,
+        webOnlyWindowName: '_self', mode: LaunchMode.externalApplication); //Modified This
     return result;
   }
 }
