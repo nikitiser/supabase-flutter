@@ -168,7 +168,7 @@ extension GoTrueClientSignInProvider on GoTrueClient {
       options: options,
     );
     final url = Uri.parse(res.url!);
-    final result = await launchUrl(url, webOnlyWindowName: '_self', webViewConfiguration: const WebViewConfiguration(headers: <String, String>{'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36'}));
+    final result = await launchUrl(url, webOnlyWindowName: '_self', webViewConfiguration: const WebViewConfiguration(headers: <String, String>{'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Mobile/15E148 Safari/604.1'}));
     return result;
   }
 }
